@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/public/style.css">
 </head>
 <body>
-<div id="app">
+<div id="app" v-cloak>
+    <div id="loading">Loading ... </div>
     <div class="header">
         <div class="container">
             <div class="title">
@@ -46,7 +47,7 @@
                 </div>
             </div>
             <div id="product-list-bottom">
-                <div v-if="product.length === results.length">No More Items</div>
+                <div v-if="products.length === results.length && results.length > 0">No More Items</div>
             </div>
         </div>
         <div class="cart">
